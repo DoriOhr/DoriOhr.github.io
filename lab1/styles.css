@@ -1,0 +1,231 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 20px;
+    background: #000000;
+    color: rgb(195, 0, 0);
+    position: relative;
+    height: 100px;
+}
+
+.title img{
+    width: 200px;
+    height: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e60000;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/**** Головна сторінка *********************************************/
+.hero {
+    text-align: center;
+    background-color: #9c0202;
+    color: white;
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #810202;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.welcome {
+    
+    background: #9c020229;
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify ;
+}
+
+.welcome h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.welcome p {
+    color: #1d1d1d;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.feature {
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+.feature:hover{
+    background-color: #9c02023c; 
+    transform: scale(1.02); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.feature h3{
+    color: #810202;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+}
+
+.footer-info{
+    color: white;
+    text-align: start;
+    padding: 1rem;
+    margin-top: 20px;
+}
+
+/**** Автомобілі ***************************************************/
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.car-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.car-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.car-card button {
+    background-color:#810202;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/**** Бронювання ****************************************************/
+.booking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.booking-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.booking-card button{
+    background-color:#810202;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/**** Про нас ********************************************************/
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.about-content h2 {
+    color: #810202;
+}
+
+/**** Медіа-запити для адаптивності **********************************/
+@media screen and (max-width: 699px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 3px 0;
+    }
+
+    .car-grid, .features, .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    
+    body {
+        font-size: 14px;
+    }
+
+    .car-card, .feature, .booking-card {
+        padding: 10px;
+    }
+}
